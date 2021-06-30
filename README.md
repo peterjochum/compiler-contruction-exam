@@ -90,6 +90,7 @@ A -> AA | (A) | e
 Generates a set of matching braces
 
 Regex (?R) is a recursion of the whole pattern - [Test on regex101](https://regex101.com/r/cAb5Z6/1)
+
 ```bash
 \((?R)*\)
 
@@ -146,7 +147,7 @@ rexp -> rexp "|" rexp
 |      | (ab\|rexp)*        |
 |      | (ab\|b)*           |
 
-#### b. Show that the grammar is ambigous:
+#### b. Show that the grammar is ambigous
 
 Input string: abc
 
