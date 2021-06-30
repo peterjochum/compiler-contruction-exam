@@ -1,0 +1,20 @@
+ @startuml
+digraph fsm {
+    rankdir=LR;
+    scale=5;
+
+    node [shape = point] start
+    node [shape = doublecircle]; s1;
+    node [shape = doublecircle ]; s2;
+    node [shape = doublecircle] s3;
+    
+    start -> s1 [label = "a"];
+    start -> s2 [label = "b"];
+
+    s1 -> s1 [ label = "a" ];
+    s1 -> s2 [ label = "b" ];
+    s2 -> s1 [ label = "a" ];
+    s2 -> s3 [ label = "b" ];
+    s3 -> s1 [ label = "a" ];
+}
+@enduml
