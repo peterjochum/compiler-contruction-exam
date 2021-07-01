@@ -7,7 +7,7 @@ digraph fsm {
     node [shape = doublecircle]; s1;
     node [shape = doublecircle ]; s2;
     node [shape = doublecircle] s3;
-    
+
     start -> s1 [label = "a"];
     start -> s2 [label = "b"];
 
