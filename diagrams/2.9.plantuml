@@ -7,10 +7,10 @@ digraph fsm {
     node [shape = circle]; s1;
     node [shape = circle ]; s2;
     node [shape = circle] s3;
-    
+
     node [shape = circle] s5;
     node [shape = circle] s6;
-    
+
     node [shape = circle] s8;
     node [shape = circle] s9;
     node [shape = circle] s10;
@@ -27,10 +27,10 @@ digraph fsm {
     s0 -> s1 [label = "c"];
 
     s1 -> s2 [label = "a" ];
-    
+
     s1 -> s5 [label = "h" ];
     s1 -> s8 [label = "o"];
-    
+
     s2 -> s3 [label = "s"];
     s3 -> end [label = "e"];
 
@@ -38,7 +38,7 @@ digraph fsm {
     s6 -> end [label = "r"];
 
     s8 -> s9 [label = "n"];
-    
+
     s9 -> s10 [label = "s"];
     s9 -> s12 [label = "t"];
 

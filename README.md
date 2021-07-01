@@ -30,7 +30,7 @@ a[a-z]*|[a-z]*a
 #### d. All strings of digits that represent even numbers
 
 ```text
-^[0-9]*[0|2|4|6|8]$
+^[0-9]*[0|2|4|6|8]
 ```
 
 #### e. All strings of digits such that all the 2's occur before all the 9's
@@ -48,7 +48,7 @@ a*(b|bb)?(a+(b|bb)?)*
 # Solution 2 - Thanks to Sebastian
 (a* | (ba+) | (bba+))* (b|bb)?
 ```
-  
+
 DFA accepting the language:
 
 ![DFA](out/2.1f.png)
@@ -69,9 +69,9 @@ b*ab*(b*ab*ab*)*$|a*ba*(a*ba*ba*)*
 ```
 
 #### i. All strings of a's and b's that contain exactly as many a's and b's
-  
+
 Not possible - would need an unlimited number of states to memorize count.
-  
+
 ### Excercise 2.9
 
 Construct a DFA accepting case, char, continue
@@ -83,7 +83,7 @@ Construct a DFA accepting case, char, continue
 ### Excercise 3.2
 
 **Language**
-A -> AA | (A) | e
+A -> AA | (A) | $\epsilon$
 
 #### a. Describe the generated language
 
@@ -135,13 +135,13 @@ rexp -> rexp "|" rexp
         | letter
 ```
 
-#### a. Give a derivation for the regular expression (ab|b)\* using this grammar
+#### a. Give a derivation for the regular expression (ab|b)* using this grammar
 
 |      | Step               |
 |------|--------------------|
 | rexp | rexp*              |
 |      | (rexp)*            |
-|      | (rexp\|rexp)*      |
+|      | (rexp \| rexp)*    |
 |      | (rexp rexp\|rexp)* |
 |      | (a rexp\|rexp)*    |
 |      | (ab\|rexp)*        |
@@ -184,5 +184,7 @@ d. What associativity does your answer in c. give to the binary operators? Why?:
 
 Left recursion -> left associativity
 
-- [Compiler construction principles, k.C. Louden](https://csunplugged.files.wordpress.com/2012/12/compiler-construction-principles-and-practice-k-c-louden-pws-1997-cmp-2002-592s.pdf)
+## Literature
+
+- [Compiler construction principles, K.C. Louden](https://csunplugged.files.wordpress.com/2012/12/compiler-construction-principles-and-practice-k-c-louden-pws-1997-cmp-2002-592s.pdf)
 - [Regex examples and solutions](https://www.cs.cmu.edu/~iliano/courses/09S-CMU-CS212/classwork/recitations/rec21/rec21-sol.pdf)
